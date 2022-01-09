@@ -1,0 +1,522 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+::after,
+::before {
+  box-sizing: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+body {
+  font-family: Roboto, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #232222;
+}
+
+.container {
+  max-width: 1220px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.header__top {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 20px;
+}
+
+.logo {
+  margin-left: 16px;
+}
+
+.menu {
+  margin-top: 16px;
+}
+
+.menu__list {
+  display: flex;
+  margin-right: 70px;
+}
+
+.menu__item+.menu__item {
+  margin-left: 30px;
+}
+
+.menu__link {
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 18px;
+  color: #001e64;
+  line-height: 21px;
+}
+
+.menu__link:hover {
+  border-bottom: 1px solid #001e64;
+}
+
+.phone {
+  margin-top: 11px;
+  margin-right: 43px;
+  height: 30px;
+}
+
+.header__content {
+  background-image: url(../images/header-bg.png);
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+  padding-bottom: 50px;
+  margin-top: -100px;
+  min-height: calc(100vh - 50px);
+}
+
+.title {
+  font-family: 'Roboto Slab', serif;
+  font-weight: 700;
+  color: #001e64;
+  font-size: 72px;
+  line-height: 85px;
+  max-width: 589px;
+  padding: 200px 0 0 112px;
+  margin-bottom: 60px;
+}
+
+.header-slider {
+  max-width: 522px;
+  padding: 57px 0 135px 112px;
+}
+
+.header-slider__text {
+  margin-bottom: 25px;
+  font-size: 18px;
+  line-height: 22px;
+  color: #fff;
+}
+
+.slick-next,
+.slick-prev {
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  padding: 0;
+  position: absolute;
+  left: 40px;
+}
+
+.slick-prev {
+  top: 0;
+}
+
+.slick-next {
+  bottom: 0;
+}
+
+.slick-dots {
+  list-style: none;
+  position: absolute;
+  left: 35px;
+  top: 57px;
+  bottom: 55px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.slick-dots+.slick-dots {
+  margin-bottom: 45px;
+}
+
+.slick-dots button {
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  font-size: 24px;
+  color: #fff;
+  line-height: 28px;
+  opacity: .5;
+  cursor: pointer;
+}
+
+.slick-arrow:focus,
+.slick-dots button:focus,
+.slick-prev:focus {
+  outline: 0;
+}
+
+.slick-active button {
+  opacity: 1;
+}
+
+.slick-dots button::before {
+  content: '0';
+}
+
+.slick-dots li:nth-child(n+10) button::before {
+  content: '0';
+}
+
+.header__content-btn {
+  position: absolute;
+  font-family: 'Roboto Slab', serif;
+  font-weight: 700;
+  color: #fff;
+  font-size: 24px;
+  line-height: 32px;
+  padding: 14px 88px;
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, .5);
+  margin-left: 112px;
+  display: inline-block;
+  transform: translateY(-100px);
+  position: absolute;
+  transition: .7s;
+}
+
+.header__content-btn:hover {
+  background-color: #fff;
+  color: #001e64;
+}
+
+.header__content-box {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 30px;
+  font-size: 18px;
+  line-height: 21px;
+  color: #fff;
+}
+
+.header__content-link--active {
+  font-weight: 700;
+}
+
+.product {
+  padding-top: 100px;
+}
+
+.product__inner {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.product__name {
+  width: 510px;
+  text-align: center;
+  padding-top: 41px;
+}
+
+.product__name-item {
+  font-family: 'Roboto Slab', serif;
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.product__name-item.slick-current {
+  font-weight: 700;
+  font-size: 36px;
+  color: #001e64;
+}
+
+.product__name-item+.product__name-item {
+  margin-top: 30px;
+}
+
+.product-prev {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.product-next,
+.product-prev {
+  border: none;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.product__content {
+  width: 600px;
+}
+
+.product__content-box {
+  display: flex;
+  justify-content: space-between;
+}
+
+.product__content-img {
+  object-fit: cover;
+  width: 260px;
+  height: 215px;
+}
+
+.product__content-list {
+  width: 291px;
+  list-style: none;
+}
+
+.product__content-item {
+  margin-bottom: 30px;
+}
+
+.product__content-item span {
+  display: block;
+  color: #001e64;
+  margin-bottom: 10px;
+}
+
+.product__content-title {
+  font-family: 'Roboto Slab', serif;
+  padding-top: 20px;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 32px;
+  color: #001e64;
+  margin-bottom: 20px;
+}
+
+.product__content-text {
+  margin-bottom: 25px;
+}
+
+.product__content-btn {
+  font-family: 'Roboto Slab', serif;
+  font-size: 24px;
+  color: #001e64;
+  line-height: 32px;
+  display: inline-block;
+  padding: 12px 85px;
+  background-color: transparent;
+  text-transform: uppercase;
+  border-radius: 20px;
+  border: 1px solid #001e64;
+  cursor: pointer;
+  transition: all .7s;
+}
+
+.product__content-btn:hover {
+  background-color: #001e64;
+  color: #fff;
+}
+
+.seafood-box {
+  background-image: url(../images/seafood-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
+  padding: 290px 0 95px;
+  font-family: 'Roboto Slab', serif;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.seafood-box__items {
+  display: flex;
+  justify-content: space-around;
+}
+
+.seafood-box__item {
+  width: 180px;
+  min-height: 165px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-image: url(../images/seafood-decor.svg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.seafood {
+  padding: 100px 0;
+}
+
+.seafood__items {
+  margin-bottom: 100px;
+}
+
+.seafood__item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+
+.seafood__item-title {
+  font-family: 'Roboto Slab', serif;
+  font-size: 24px;
+  line-height: 29px;
+  margin-bottom: 30px;
+  max-width: 490px;
+  color: #001e64;
+  font-weight: 400;
+}
+
+.seafood__item-text {
+  margin-bottom: 20px;
+  max-width: 420px;
+}
+
+.seafood__item--text-right .seafood__item-title {
+  max-width: 420px;
+}
+
+.seafood__item--text-right .seafood__item-content {
+  margin-right: 180px;
+}
+
+.seafood__blockquote {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.seafood__blockquote-text {
+  font-family: 'Roboto Slab', serif;
+  max-width: 530px;
+  margin: 0 auto;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.contacts {
+  background-image: url(../images/contacts-bg.jpg);
+  background-repeat: no-repeat;
+  background-position: bottom left;
+  margin-bottom: 29px;
+}
+
+.contacts__box {
+  margin-left: auto;
+  width: 390px;
+  background-color: #fff;
+  padding: 33px 0 33px 15px;
+}
+
+.contacts__box-text {
+  width: 195px;
+  font-family: 'Roboto Slab', serif;
+  color: #001E64;
+  font-size: 18px;
+  line-height: 24px;
+  margin-bottom: 30px;
+}
+
+.contacts__box-list {
+  list-style: none;
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.contacts__box-item {
+  margin-top: 30px;
+}
+
+.contacts__box-item span {
+  display: block;
+}
+
+.footer {
+  margin-bottom: 110px;
+}
+
+.footer__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 0 45px 0 23px;
+}
+
+.footer__inner .menu {
+  padding-bottom: 32px;
+}
+
+.footer__inner .logo {
+  margin-left: 0;
+}
+
+.footer-social__list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  padding-bottom: 20px;
+}
+
+.footer-social__item+.footer-social__item {
+  margin-left: 10px;
+}
+
+.footer-social__link:hover path {
+  fill: #001e64;
+}
+
+.footer-social__link path {
+  transition: all .3s;
+}
+
+.footer .menu__list {
+  margin-right: 0;
+}
+
+/* Начало адаптивной версии */
+
+.menu__btn {
+  display: none;
+  width: 40px;
+  border: none;
+  background-color: transparent;
+  padding: 10px 0;
+  cursor: pointer;
+  position: relative;
+  z-index: 10;
+}
+
+.menu__btn::after,
+.menu__btn::before {
+  position: absolute;
+  content: '';
+  left: 0;
+  right: 0;
+  height: 4px;
+  background-color: #001e64;
+}
+
+.menu__btn::before {
+  top: 0;
+}
+
+.menu__btn::after {
+  bottom: 0;
+}
+
+.menu__btn span {
+  display: block;
+  height: 4px;
+  background-color: #001e64;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Конец адаптивной версии */
